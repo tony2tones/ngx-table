@@ -10,9 +10,10 @@ export class AppComponent implements OnInit{
   loadingIndicator: boolean = true;
   reorderable: boolean = true;
 
-  columns = [
-    { prop: 'name' },
-    { name: 'Gender' }
+  public columns = [
+    { prop: 'firstName', name: 'Name' },
+    { prop: 'lastName', name: 'Surname' },
+    { prop: 'gender', name: 'Gender' }
   ];
 
   ngOnInit() {

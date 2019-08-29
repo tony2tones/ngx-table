@@ -1,18 +1,22 @@
-import { CurrencyResponseModel } from "../models/currency-response.model";
+import { DataModel } from "../model/datamodel";
 
-export const mockData: [] = [
+export const mockData: DataModel[] = [
   {
-    currencyName: "Netherlands Antillean Guilder",
-    currencyCode: "ANG",
-    absaTraded: "N",
-    majorIndicator: "N",
-    permissibleDailyVolatility: 0.000002
+    firstName: "Tony",
+    lastName: "Marques",
+    gender: "male",
+    working: true
   },
   {
-    currencyName: "Nigerian Autonomous Foreign Exchange Rate",
-    currencyCode: "NGX",
-    absaTraded: "Y",
-    majorIndicator: "Y",
-    permissibleDailyVolatility: 10.000000122
+    firstName: "Andrea",
+    lastName: "Johnston",
+    gender: "female",
+    working: true
+  },
+  {
+    firstName: "Davie",
+    lastName: "Johnz",
+    gender: "male",
+    working: false
   }
 ];
