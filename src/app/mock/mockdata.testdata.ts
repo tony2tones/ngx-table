@@ -9,7 +9,7 @@ export const mockData: DataModel[] = [
   },
   {
     firstName: "Andrea",
-    lastName: "Johnston",
+    lastName: "Jonesy",
     gender: "female",
     working: true
   },

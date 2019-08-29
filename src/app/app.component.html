@@ -10,12 +10,14 @@
       </a>
     </small>
   </h3>
-  <ngx-datatable
-    class="material"
-    [rows]="rows"
-    [loadingIndicator]="loadingIndicator"
-    [columns]="columns"
-  >
-  </ngx-datatable>
+  <div *ngIf="!isloading">
+    <ngx-datatable
+      class="material"
+      [rows]="rows"
+      [loadingIndicator]="loadingIndicator"
+      [columns]="columns"
+    >
+    </ngx-datatable>
+  </div>
 </div>
 <router-outlet></router-outlet>
