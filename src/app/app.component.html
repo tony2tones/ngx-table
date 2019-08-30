@@ -10,11 +10,11 @@
       </a>
     </small>
   </h3>
-  <div *ngIf="!isloading">
+  <div class="body">
     <ngx-datatable
       class="material"
-      [rows]="rows"
       [loadingIndicator]="loadingIndicator"
+      [rows]="rows"
       [columns]="columns"
     >
     </ngx-datatable>

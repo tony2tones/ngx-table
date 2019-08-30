@@ -1,24 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { mockData } from './mock/mockdata.testdata';
+import { Component, OnInit, Input } from "@angular/core";
+import { mockData } from "./mock/mockdata.testdata";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   rows = [];
-  loadingIndicator: boolean = true;
+  // loadingIndicator: boolean = true;
   reorderable: boolean = true;
+  @Input() loadingIndicator: boolean = true;
 
   public columns = [
-    { prop: 'firstName', name: 'Name' },
-    { prop: 'lastName', name: 'Surname' },
-    { prop: 'gender', name: 'Gender' },
-    { prop: 'working', name: 'Employed' }
+    { prop: "firstName", name: "Name" },
+    { prop: "lastName", name: "Surname" },
+    { prop: "gender", name: "Gender" },
+    { prop: "working", name: "Employed" }
   ];
 
   ngOnInit() {
+    this.loadTable();
+  }
+
+  loadTable() {
     this.rows = mockData;
+    setInterval(() => {
+      this.loadingIndicator = false;
+    }, 2000);
   }
 }
