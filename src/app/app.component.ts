@@ -8,9 +8,8 @@ import { mockData } from "./mock/mockdata.testdata";
 })
 export class AppComponent implements OnInit {
   rows = [];
-  // loadingIndicator: boolean = true;
   reorderable: boolean = true;
-  @Input() loadingIndicator: boolean = true;
+  loadingIndicator: boolean = true;
 
   public columns = [
     { prop: "firstName", name: "Name" },

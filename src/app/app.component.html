@@ -12,11 +12,20 @@
   </h3>
   <div class="body">
     <ngx-datatable
-      class="material"
+      class="bootstrap"
       [loadingIndicator]="loadingIndicator"
       [rows]="rows"
       [columns]="columns"
+      [columnMode]="'force'"
+      [headerHeight]="40"
+      [summaryRow]="true"
+      [summaryPosition]="'bottom'"
+      [footerHeight]="40"
+      [limit]="10"
+      [rowHeight]="'auto'"
+      [reorderable]="reorderable"
     >
+      >
     </ngx-datatable>
   </div>
 </div>
