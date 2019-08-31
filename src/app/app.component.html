@@ -1,17 +1,10 @@
-<div>
-  <h3>
-    Fluid Row Heights
-    <small>
-      <a
-        href="https://github.com/swimlane/ngx-datatable/blob/master/demo/basic/basic-auto.component.ts"
-        target="_blank"
-      >
-        Source
-      </a>
-    </small>
-  </h3>
-  <div class="body">
+<div class="background">
+  <div class="loading" *ngIf="loadingIndicator">
+    table loading...
+  </div>
+  <div class="table">
     <ngx-datatable
+      *ngIf="!loadingIndicator"
       class="bootstrap"
       [loadingIndicator]="loadingIndicator"
       [rows]="rows"
@@ -28,5 +21,5 @@
       >
     </ngx-datatable>
   </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
