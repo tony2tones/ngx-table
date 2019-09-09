@@ -1,5 +1,7 @@
 import { DataModel } from "../model/datamodel";
 
+// Fun fake data to play with
+
 export const mockData: DataModel[] = [
   {
     firstName: "Tony",
