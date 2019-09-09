@@ -1,6 +1,7 @@
 <div class="background">
-  <div class="loading" *ngIf="loadingIndicator">
-    table loading...
+  <div *ngIf="loadingIndicator"
+  >
+  <loader-fancy></loader-fancy>
   </div>
   <div class="table">
     <ngx-datatable
