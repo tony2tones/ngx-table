@@ -26,6 +26,6 @@ export class AppComponent implements OnInit {
     this.rows = mockData;
     setInterval(() => {
       this.loadingIndicator = false;
-    }, 4000);
+    }, 1000);
   }
 }

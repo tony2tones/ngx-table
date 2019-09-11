@@ -17,7 +17,17 @@
       [limit]="10"
       [rowHeight]="'auto'"
     >
-      >
+    <ngx-datatable-column name="First name" prop="firstName"></ngx-datatable-column>
+        <ngx-datatable-column name="Employed" [sortable]="true" prop="working">
+            <ng-template
+              let-row="row"
+              let-value="value"
+              ngx-datatable-cell-template
+            >
+              <i *ngIf="value" class="ico-check"></i>
+              <i *ngIf="!value" class="ico-x"></i>
+            </ng-template>
+          </ngx-datatable-column>
     </ngx-datatable>
   </div>
   <router-outlet></router-outlet>
