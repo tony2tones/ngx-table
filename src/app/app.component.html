@@ -1,7 +1,6 @@
 <div class="background">
-  <div *ngIf="loadingIndicator"
-  >
-  <loader-fancy></loader-fancy>
+  <div *ngIf="loadingIndicator">
+    <loader-fancy></loader-fancy>
   </div>
   <div class="table">
     <ngx-datatable
@@ -17,17 +16,18 @@
       [limit]="10"
       [rowHeight]="'auto'"
     >
-    <ngx-datatable-column name="First name" prop="firstName"></ngx-datatable-column>
-        <ngx-datatable-column name="Employed" [sortable]="true" prop="working">
-            <ng-template
-              let-row="row"
-              let-value="value"
-              ngx-datatable-cell-template
-            >
-              <i *ngIf="value" class="ico-check"></i>
-              <i *ngIf="!value" class="ico-x"></i>
-            </ng-template>
-          </ngx-datatable-column>
+      <ngx-datatable-column name="First name" prop="firstName"></ngx-datatable-column>
+      <ngx-datatable-column name="Surname" prop="lastName"></ngx-datatable-column>
+      <ngx-datatable-column name="Gender" prop="gender"></ngx-datatable-column>
+      <ngx-datatable-column name="Employed" [sortable]="true" prop="working">
+        <ng-template
+          let-row="row"
+          let-value="value"
+          ngx-datatable-cell-template>
+          <i *ngIf="value === false" class="fa fa-times"></i>
+          <i *ngIf="value === true" class="ico-x">yes</i>
+        </ng-template>
+      </ngx-datatable-column>
     </ngx-datatable>
   </div>
   <router-outlet></router-outlet>
