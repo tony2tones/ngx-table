@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable'; 
 import { FancyLoader } from './shared/loader/fancyLoader.component';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { FancyLoader } from './shared/loader/fancyLoader.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxDatatableModule
+    NgxDatatableModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

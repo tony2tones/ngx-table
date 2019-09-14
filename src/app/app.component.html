@@ -18,14 +18,19 @@
     >
       <ngx-datatable-column name="First name" prop="firstName"></ngx-datatable-column>
       <ngx-datatable-column name="Surname" prop="lastName"></ngx-datatable-column>
-      <ngx-datatable-column name="Gender" prop="gender"></ngx-datatable-column>
+      <ngx-datatable-column name="Gender" prop="gender">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <i *ngIf="value === 'female'" class="fa fa-female"></i>
+            <i *ngIf="value === 'male'" class="fa fa-male"></i>
+        </ng-template>
+      </ngx-datatable-column>
       <ngx-datatable-column name="Employed" [sortable]="true" prop="working">
         <ng-template
           let-row="row"
           let-value="value"
           ngx-datatable-cell-template>
           <i *ngIf="value === false" class="fa fa-times"></i>
-          <i *ngIf="value === true" class="ico-x">yes</i>
+          <i *ngIf="value === true" class="fa fa-check"></i>
         </ng-template>
       </ngx-datatable-column>
     </ngx-datatable>
